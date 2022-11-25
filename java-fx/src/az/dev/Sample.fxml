@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.SampleController">
-	<!-- TODO Add Nodes -->
+
+
+<AnchorPane prefHeight="529.0" prefWidth="692.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="az.dev.SampleController">
+   <children>
+      <Button layoutX="52.0" layoutY="160.0" mnemonicParsing="false" onAction="#saveStudent" prefHeight="31.0" prefWidth="70.0" styleClass="my-button" text="OK" />
+      <TextField fx:id="studentNameText" layoutX="46.0" layoutY="54.0" prefHeight="42.0" prefWidth="198.0" promptText="Bura tələbə adını yaz" />
+      <Label fx:id="studentNameLabel" layoutX="70.0" layoutY="244.0" prefHeight="61.0" prefWidth="452.0" textFill="#070707">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
