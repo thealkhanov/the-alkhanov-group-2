@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="410.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.LoginController">
+   <children>
+      <Label layoutX="22.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0" text="Username">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameText" layoutX="22.0" layoutY="89.0" prefHeight="40.0" prefWidth="143.0" promptText="İstifadəçi adını yaz" />
+      <Label layoutX="22.0" layoutY="153.0" prefHeight="61.0" prefWidth="143.0" text="Password">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passwordText" layoutX="22.0" layoutY="229.0" prefHeight="40.0" prefWidth="143.0" promptText="Şifrənizi daxil edin" />
+      <Button layoutX="22.0" layoutY="302.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="51.0" prefWidth="120.0" style="-fx-background-color: #629DFF;" text="Daxil ol">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
