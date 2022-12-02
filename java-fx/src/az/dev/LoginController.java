@@ -19,7 +19,7 @@ public class LoginController {
 	@FXML
 	private PasswordField passwordText;
 	
-	private String realUsername="Zahra";
+	private String realUsername="Ziya";
 	private String realPassword="1234";
 	
 	@FXML

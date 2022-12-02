@@ -10,19 +10,25 @@
    <children>
       <Label layoutX="22.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0" text="Username">
          <font>
-            <Font size="26.0" />
+            <Font name="Book Antiqua Italic" size="26.0" />
          </font>
       </Label>
-      <TextField fx:id="usernameText" layoutX="22.0" layoutY="89.0" prefHeight="40.0" prefWidth="143.0" promptText="İstifadəçi adını yaz" />
-      <Label layoutX="22.0" layoutY="153.0" prefHeight="61.0" prefWidth="143.0" text="Password">
+      <TextField fx:id="usernameText" layoutX="22.0" layoutY="89.0" prefHeight="40.0" prefWidth="169.0" promptText="İstifadəçi adınızı yazın">
          <font>
-            <Font size="26.0" />
+            <Font name="System Italic" size="15.0" />
+         </font></TextField>
+      <Label layoutX="279.0" layoutY="14.0" prefHeight="61.0" prefWidth="143.0" text="Password">
+         <font>
+            <Font name="Book Antiqua Italic" size="26.0" />
          </font>
       </Label>
-      <PasswordField fx:id="passwordText" layoutX="22.0" layoutY="229.0" prefHeight="40.0" prefWidth="143.0" promptText="Şifrənizi daxil edin" />
-      <Button layoutX="22.0" layoutY="302.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="51.0" prefWidth="120.0" style="-fx-background-color: #629DFF;" text="Daxil ol">
+      <PasswordField fx:id="passwordText" layoutX="279.0" layoutY="89.0" prefHeight="40.0" prefWidth="169.0" promptText="Şifrənizi yazın">
          <font>
-            <Font name="System Bold" size="24.0" />
+            <Font name="System Italic" size="15.0" />
+         </font></PasswordField>
+      <Button layoutX="22.0" layoutY="180.0" mnemonicParsing="false" onAction="#onLogin" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #629DFF;" text="Daxil ol">
+         <font>
+            <Font name="System Bold" size="18.0" />
          </font>
       </Button>
    </children>

@@ -8,19 +8,19 @@
 
 <AnchorPane prefHeight="548.0" prefWidth="587.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.SampleController">
    <children>
-      <Button layoutX="43.0" layoutY="111.0" mnemonicParsing="false" onAction="#saveStudent" prefHeight="34.0" prefWidth="112.0" style="-fx-background-color: #203869;" text="Yadda saxla" textFill="RED">
+      <Button layoutX="43.0" layoutY="132.0" mnemonicParsing="false" onAction="#saveStudent" prefHeight="34.0" prefWidth="133.0" style="-fx-background-color: #203869;" text="Aşağıda göstər" textFill="RED">
          <font>
             <Font name="Calibri" size="18.0" />
          </font></Button>
-      <TextField fx:id="studentNameText" layoutX="43.0" layoutY="33.0" promptText="Adınızı daxil edin" />
-      <Label fx:id="studentNameLabel" layoutX="71.0" layoutY="185.0" prefHeight="50.0" prefWidth="313.0" text="Label">
+      <TextField fx:id="studentNameText" layoutX="43.0" layoutY="33.0" prefHeight="42.0" prefWidth="174.0" promptText="Adınızı daxil edin" />
+      <Label fx:id="studentNameLabel" layoutX="43.0" layoutY="224.0" prefHeight="50.0" prefWidth="313.0" textFill="#1bfcff">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
-      <Button layoutX="209.0" layoutY="107.0" mnemonicParsing="false" onAction="#openLoginPage" prefHeight="42.0" prefWidth="112.0" text="Logini aç">
+      <Button layoutX="200.0" layoutY="132.0" mnemonicParsing="false" onAction="#openLoginPage" prefHeight="26.0" prefWidth="115.0" style="-fx-background-color: #FBCD20;" text="Logini aç" textFill="#1b2fff">
          <font>
-            <Font name="System Bold" size="19.0" />
+            <Font name="System Bold" size="17.0" />
          </font>
       </Button>
    </children>
