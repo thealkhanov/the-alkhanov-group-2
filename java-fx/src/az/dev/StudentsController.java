@@ -1,13 +1,16 @@
 package az.dev;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
-
-import org.controlsfx.control.Notifications;
+import java.time.LocalDate;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
 public class StudentsController {
@@ -25,12 +28,17 @@ public class StudentsController {
 	private TextField studentRegisterAddress;
 	
 	@FXML
+	private DatePicker studentBirthday;
+	
+	@FXML
 	private void saveStudentsToDatabase() {
+		
+		Connection conn=null;
 		
 		try {
 			
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection conn=DriverManager.getConnection
+			conn=DriverManager.getConnection
 					("jdbc:mysql://localhost:3306/students_fx","root","1234");
 			Statement stmt = conn.createStatement();
 			
@@ -58,13 +66,43 @@ public class StudentsController {
 				return;
 			}
 			
-			stmt.executeUpdate("insert into students (name,surname,phone,address) values ('"+ad+"','"+soyad+"','"+telefon+"','"+ünvan+"');");
+			LocalDate birthday = studentBirthday.getValue();
+			LocalDate indikiTarix=LocalDate.now();
+			if(birthday.isAfter(indikiTarix)) {
+				Utility.showMessage("Xəbərdarlıq", "Doğum tarixi gələcək tarix seçilə bilməz !", 10, Pos.BASELINE_RIGHT);
+				return;
+			}
 			
+			stmt.executeUpdate("insert into students (name,surname,phone,address,birthday) values ('"+ad+"','"+soyad+"','"+telefon+"','"+ünvan+"','"+birthday+"');");
+			
+			ResultSet rs = stmt.executeQuery("select * from students order by id desc");
+			while(rs.next()) {
+				String ad1 = rs.getString("name");
+				String soyad1 = rs.getString("surname");
+				String tel1 = rs.getString("phone");
+				String unvan1 = rs.getString("address");
+				Date d=rs.getDate("birthday");
+				LocalDate tevellud=null; 
+				if(d==null) {
+					
+				}else {
+					tevellud = d.toLocalDate();
+				}
+				
+				System.out.printf("ad: %s, soyad: %s, telefon: %s, adres: %s,təvəllüd: %s",ad1,soyad1,tel1,unvan1,tevellud);
+				System.out.println();
+			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 
