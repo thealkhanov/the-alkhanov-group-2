@@ -1,5 +1,6 @@
 package az.dev;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -7,13 +8,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class StudentsController {
+public class StudentsController implements Initializable{
 	
 	@FXML
 	private TextField studentRegisterName;
@@ -29,6 +33,10 @@ public class StudentsController {
 	
 	@FXML
 	private DatePicker studentBirthday;
+	
+	@FXML
+	private ComboBox<String>studentNationality;
+	
 	
 	@FXML
 	private void saveStudentsToDatabase() {
@@ -103,6 +111,21 @@ public class StudentsController {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		{
+			studentNationality.getItems().add("Azərbaycanlı");
+			studentNationality.getItems().add("Türk");
+			studentNationality.getItems().add("İngilis");
+			studentNationality.getItems().add("Argentinalı");
+			studentNationality.getItems().add("Alman");
+			studentNationality.getItems().add("Yapon");
+			studentNationality.getSelectionModel().select(0);  //proqram açılanda hansı milliyyət gəlsin
+			studentNationality.getSelectionModel().getSelectedItem();  //comboBox-dan məlumatları götürmək
+		}
+		
 	}
 	
 

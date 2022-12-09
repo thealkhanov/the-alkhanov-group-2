@@ -71,6 +71,15 @@
                      </font>
                   </Label>
                   <DatePicker fx:id="studentBirthday" prefHeight="53.0" prefWidth="221.0" />
+                  <Label prefHeight="58.0" prefWidth="135.0" text="Milliyyət">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="studentNationality" prefHeight="53.0" prefWidth="221.0" />
                </children>
             </HBox>
             <HBox prefHeight="64.0" prefWidth="1002.0">
