@@ -1,26 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="553.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
+<AnchorPane prefHeight="553.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
    <children>
       <Label layoutX="34.0" layoutY="7.0" prefHeight="53.0" prefWidth="689.0" text="Tələbə qeydiyyatı səhifəsinə xoş gəlmisiniz !" textFill="#2f753c">
          <font>
             <Font name="System Italic" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="studentRegisterName" layoutX="16.0" layoutY="116.0" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin adını daxil edin" />
-      <TextField fx:id="studentRegisterSurname" layoutX="351.0" layoutY="116.0" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin soyadını daxil edin" />
-      <TextField fx:id="studentRegisterPhone" layoutX="16.0" layoutY="224.0" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin nömrəsini daxil edin" />
-      <TextField fx:id="studentRegisterAddress" layoutX="351.0" layoutY="224.0" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin ünvanını daxil edin" />
-      <Button layoutX="16.0" layoutY="319.0" mnemonicParsing="false" onAction="#saveStudentsToDatabase" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: #000000;" text="Bazaya yaz" textFill="#fcff1a">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Button>
+      <VBox layoutX="20.0" layoutY="77.0" prefHeight="200.0" prefWidth="992.0">
+         <children>
+            <HBox prefHeight="64.0" prefWidth="1002.0" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="58.0" text="Ad">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="studentRegisterName" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin adını daxil edin" />
+                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="122.0" text="Soyad">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="studentRegisterSurname" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin soyadını daxil edin" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefHeight="64.0" prefWidth="1002.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="58.0" prefWidth="108.0" text="Telefon">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="studentRegisterPhone" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin nömrəsini daxil edin" />
+                  <Label prefHeight="58.0" prefWidth="111.0" text="Ünvan">
+                     <font>
+                        <Font size="31.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="studentRegisterAddress" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin ünvanını daxil edin" />
+               </children>
+            </HBox>
+            <HBox prefHeight="64.0" prefWidth="1002.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveStudentsToDatabase" prefHeight="43.0" prefWidth="104.0" style="-fx-background-color: #000000;" text="Bazaya yaz" textFill="#fcff1a">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
