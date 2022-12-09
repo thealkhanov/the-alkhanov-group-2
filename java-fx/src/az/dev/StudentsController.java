@@ -4,7 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
+import org.controlsfx.control.Notifications;
+
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.control.TextField;
 
 public class StudentsController {
@@ -32,9 +35,28 @@ public class StudentsController {
 			Statement stmt = conn.createStatement();
 			
 			String ad=studentRegisterName.getText();
+			if(ad.trim().equals("")) {
+				Utility.showMessage("Xəbərdarlıq", "Adı boş qoyma !", 3, Pos.BASELINE_RIGHT);
+				return;
+			}
+			
 			String soyad=studentRegisterSurname.getText();
+			if(soyad.trim().equals("")) {
+				Utility.showMessage("Xəbərdarlıq", "Soyadı boş qoyma !", 3, Pos.BASELINE_RIGHT);
+				return;
+			}
+			
 			String telefon=studentRegisterPhone.getText();
+			if(telefon.trim().equals("")) {
+				Utility.showMessage("Xəbərdarlıq", "Telefonu boş qoyma !", 3, Pos.BASELINE_RIGHT);
+				return;
+			}
+			
 			String ünvan=studentRegisterAddress.getText();
+			if(ünvan.trim().equals("")) {
+				Utility.showMessage("Xəbərdarlıq", "Ünvanı boş qoyma !", 3, Pos.BASELINE_RIGHT);
+				return;
+			}
 			
 			stmt.executeUpdate("insert into students (name,surname,phone,address) values ('"+ad+"','"+soyad+"','"+telefon+"','"+ünvan+"');");
 			
