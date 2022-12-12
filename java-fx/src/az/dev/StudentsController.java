@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
 public class StudentsController implements Initializable{
@@ -33,6 +34,9 @@ public class StudentsController implements Initializable{
 	
 	@FXML
 	private DatePicker studentBirthday;
+	
+	@FXML
+	private ListView<String> myListView;
 	
 	@FXML
 	private ComboBox<String>studentNationality;
@@ -131,5 +135,41 @@ public class StudentsController implements Initializable{
 		
 	}
 	
+	
+	@FXML
+	private void onAddNameToListView() {
+		
+		String name1 = studentRegisterName.getText();
+		myListView.getItems().add(name1);
+		
+	}
+	
+	@FXML
+	private void deleteName() {
+		int selectedIndex=myListView.getSelectionModel().getSelectedIndex();
+		if(selectedIndex==-1) {
+			Utility.showMessage("Xəbərdarlıq", "Siyahıdan seçim et !", 5, Pos.BASELINE_RIGHT);
+			return;
+		}
+		myListView.getItems().remove(selectedIndex);
+	}
 
+	@FXML
+	private void selectName() {
+		String gosterilecekAd = myListView.getSelectionModel().getSelectedItem();
+		Utility.showMessage("Bunu cədvəldən seçdin", gosterilecekAd, 6, Pos.BASELINE_RIGHT);
+	}
+	
+	@FXML
+	private void editName() {
+		String name1=studentRegisterName.getText();
+		int selectedIndex=myListView.getSelectionModel().getSelectedIndex();
+		if(selectedIndex<0) {
+			Utility.showMessage("Xəbərdarlıq", "Siyahıdan redaktə üçün seçim et !", 5, Pos.BASELINE_RIGHT);
+			return;
+		}
+		myListView.getItems().set(selectedIndex, name1);
+		
+	}
+	
 }
