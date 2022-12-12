@@ -74,6 +74,8 @@ public class StudentsController implements Initializable{
 				return;
 			}
 			
+			String milliyyət = studentNationality.getSelectionModel().getSelectedItem();
+			
 			LocalDate birthday = studentBirthday.getValue();
 			LocalDate indikiTarix=LocalDate.now();
 			if(birthday.isAfter(indikiTarix)) {
@@ -81,7 +83,7 @@ public class StudentsController implements Initializable{
 				return;
 			}
 			
-			stmt.executeUpdate("insert into students (name,surname,phone,address,birthday) values ('"+ad+"','"+soyad+"','"+telefon+"','"+ünvan+"','"+birthday+"');");
+			stmt.executeUpdate("insert into students (name,surname,phone,address,birthday,nationality) values ('"+ad+"','"+soyad+"','"+telefon+"','"+ünvan+"','"+birthday+"','"+milliyyət+"');");
 			
 			ResultSet rs = stmt.executeQuery("select * from students order by id desc");
 			while(rs.next()) {
@@ -89,6 +91,7 @@ public class StudentsController implements Initializable{
 				String soyad1 = rs.getString("surname");
 				String tel1 = rs.getString("phone");
 				String unvan1 = rs.getString("address");
+				String milliyyet1 = rs.getString("nationality");
 				Date d=rs.getDate("birthday");
 				LocalDate tevellud=null; 
 				if(d==null) {
@@ -97,7 +100,7 @@ public class StudentsController implements Initializable{
 					tevellud = d.toLocalDate();
 				}
 				
-				System.out.printf("ad: %s, soyad: %s, telefon: %s, adres: %s,təvəllüd: %s",ad1,soyad1,tel1,unvan1,tevellud);
+				System.out.printf("ad: %s, soyad: %s, telefon: %s, adres: %s, təvəllüd: %s, milliyyət: %s",ad1,soyad1,tel1,unvan1,tevellud,milliyyet1);
 				System.out.println();
 			}
 			

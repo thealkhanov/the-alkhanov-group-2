@@ -27,7 +27,7 @@
                      </HBox.margin>
                   </Label>
                   <TextField fx:id="studentRegisterName" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin adını daxil edin" />
-                  <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="122.0" text="Soyad">
+                  <Label prefHeight="54.0" prefWidth="122.0" text="Soyad">
                      <font>
                         <Font size="31.0" />
                      </font>
@@ -52,13 +52,10 @@
                      </font>
                   </Label>
                   <TextField fx:id="studentRegisterPhone" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin nömrəsini daxil edin" />
-                  <Label prefHeight="58.0" prefWidth="111.0" text="Ünvan">
+                  <Label prefHeight="54.0" prefWidth="122.0" text="Ünvan">
                      <font>
                         <Font size="31.0" />
                      </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
                   </Label>
                   <TextField fx:id="studentRegisterAddress" prefHeight="53.0" prefWidth="221.0" promptText="Tələbənin ünvanını daxil edin" />
                </children>
