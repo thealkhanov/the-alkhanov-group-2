@@ -7,136 +7,93 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="743.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
+<AnchorPane prefHeight="877.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
    <children>
       <Label layoutX="34.0" layoutY="7.0" prefHeight="53.0" prefWidth="689.0" text="Tələbə qeydiyyatı səhifəsinə xoş gəlmisiniz !" textFill="#2f753c">
          <font>
             <Font name="System Italic" size="36.0" />
          </font>
       </Label>
-      <VBox layoutX="14.0" layoutY="114.0" prefHeight="560.0" prefWidth="992.0">
-         <children>
-            <HBox prefHeight="64.0" prefWidth="1002.0" spacing="20.0">
-               <children>
-                  <Label alignment="CENTER_RIGHT" prefHeight="54.0" prefWidth="58.0" text="Ad">
-                     <font>
-                        <Font size="31.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets right="40.0" />
-                     </HBox.margin>
-                  </Label>
-                  <TextField fx:id="studentRegisterName" prefHeight="53.0" prefWidth="221.0">
-                     <font>
-                        <Font size="21.0" />
-                     </font></TextField>
-                  <Label prefHeight="54.0" prefWidth="122.0" text="Soyad">
-                     <font>
-                        <Font size="31.0" />
-                     </font>
-                     <padding>
-                        <Insets left="20.0" />
-                     </padding>
-                  </Label>
-                  <TextField fx:id="studentRegisterSurname" prefHeight="53.0" prefWidth="221.0">
-                     <font>
-                        <Font size="21.0" />
-                     </font></TextField>
-               </children>
-               <padding>
-                  <Insets bottom="5.0" top="5.0" />
-               </padding>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
-            <HBox prefHeight="64.0" prefWidth="1002.0" spacing="10.0">
-               <children>
-                  <Label prefHeight="58.0" prefWidth="108.0" text="Telefon">
-                     <font>
-                        <Font size="31.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="studentRegisterPhone" prefHeight="53.0" prefWidth="221.0">
-                     <font>
-                        <Font size="21.0" />
-                     </font></TextField>
-                  <Label prefHeight="54.0" prefWidth="122.0" text="Ünvan">
-                     <font>
-                        <Font size="31.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="studentRegisterAddress" prefHeight="53.0" prefWidth="221.0">
-                     <font>
-                        <Font size="21.0" />
-                     </font></TextField>
-               </children>
-            </HBox>
-            <HBox layoutX="10.0" layoutY="74.0" prefHeight="64.0" prefWidth="1002.0" spacing="10.0">
-               <children>
-                  <Label prefHeight="58.0" prefWidth="126.0" text="Təvəllüd">
-                     <font>
-                        <Font size="31.0" />
-                     </font>
-                  </Label>
-                  <DatePicker fx:id="studentBirthday" prefHeight="53.0" prefWidth="221.0" />
-                  <Label prefHeight="58.0" prefWidth="135.0" text="Milliyyət">
-                     <font>
-                        <Font size="31.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" />
-                     </padding>
-                  </Label>
-                  <ComboBox fx:id="studentNationality" prefHeight="53.0" prefWidth="221.0" />
-               </children>
-            </HBox>
-            <HBox prefHeight="64.0" prefWidth="1002.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#saveStudentsToDatabase" prefHeight="45.0" prefWidth="126.0" style="-fx-background-color: #000000;" text="Bazaya yaz" textFill="#fcff1a">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onAddNameToListView" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: #6A0C51;" text="List-də göstər" textFill="#25cdff">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button layoutX="146.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteName" prefHeight="45.0" prefWidth="82.0" style="-fx-background-color: #FF0101;" text="Sil" textFill="#009c1f">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button layoutX="299.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectName" prefHeight="45.0" prefWidth="82.0" style="-fx-background-color: #FFBA0E;" text="Seç" textFill="#0efff4">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button layoutX="391.0" layoutY="10.0" mnemonicParsing="false" onAction="#editName" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #FFBA0E;" text="Redaktə et">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="10.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
-            <ListView fx:id="myListView" prefHeight="292.0" prefWidth="992.0" />
-         </children>
-      </VBox>
+      <TextField fx:id="studentRegisterName" layoutX="174.0" layoutY="111.0" prefHeight="53.0" prefWidth="221.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="93.0" layoutY="111.0" prefHeight="54.0" prefWidth="58.0" text="Ad">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <Label layoutX="442.0" layoutY="110.0" prefHeight="54.0" prefWidth="122.0" text="Soyad">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="studentRegisterSurname" layoutX="541.0" layoutY="111.0" prefHeight="53.0" prefWidth="221.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="55.0" layoutY="181.0" prefHeight="58.0" prefWidth="108.0" text="Telefon">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="studentRegisterPhone" layoutX="174.0" layoutY="184.0" prefHeight="53.0" prefWidth="221.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="442.0" layoutY="186.0" prefHeight="54.0" prefWidth="90.0" text="Ünvan">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="studentRegisterAddress" layoutX="541.0" layoutY="186.0" prefHeight="53.0" prefWidth="221.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label layoutX="44.0" layoutY="261.0" prefHeight="58.0" prefWidth="119.0" text="Təvəllüd">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="studentBirthday" layoutX="174.0" layoutY="263.0" prefHeight="53.0" prefWidth="221.0" />
+      <Label layoutX="408.0" layoutY="261.0" prefHeight="58.0" prefWidth="135.0" text="Milliyyət">
+         <font>
+            <Font size="31.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <ComboBox fx:id="studentNationality" layoutX="541.0" layoutY="264.0" prefHeight="53.0" prefWidth="221.0" />
+      <Button layoutX="46.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveStudentsToDatabase" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #000000;" text="Bazaya yaz" textFill="#fcff1a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="188.0" layoutY="344.0" mnemonicParsing="false" onAction="#onAddNameToListView" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: #6A0C51;" text="List-də göstər" textFill="#25cdff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="354.0" layoutY="344.0" mnemonicParsing="false" onAction="#deleteName" prefHeight="45.0" prefWidth="82.0" style="-fx-background-color: #FF0101;" text="Sil" textFill="#0031ff">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="469.0" layoutY="344.0" mnemonicParsing="false" onAction="#selectName" prefHeight="45.0" prefWidth="82.0" style="-fx-background-color: #00f9ef;" text="Seç">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="579.0" layoutY="344.0" mnemonicParsing="false" onAction="#editName" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #FFBA0E;" text="Redaktə et">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ListView fx:id="myListView" layoutX="14.0" layoutY="423.0" prefHeight="370.0" prefWidth="992.0" />
    </children>
 </AnchorPane>
