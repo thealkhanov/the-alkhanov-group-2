@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="877.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
+<AnchorPane prefHeight="744.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
    <children>
       <Label layoutX="34.0" layoutY="7.0" prefHeight="53.0" prefWidth="689.0" text="Tələbə qeydiyyatı səhifəsinə xoş gəlmisiniz !" textFill="#2f753c">
          <font>
@@ -94,6 +94,11 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ListView fx:id="myListView" layoutX="14.0" layoutY="423.0" prefHeight="370.0" prefWidth="992.0" />
+      <ListView fx:id="myListView" layoutX="14.0" layoutY="423.0" prefHeight="202.0" prefWidth="992.0" />
+      <Label fx:id="rowCountLabel" alignment="BOTTOM_LEFT" layoutX="17.0" layoutY="631.0" prefHeight="54.0" prefWidth="308.0">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

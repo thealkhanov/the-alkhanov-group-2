@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
@@ -37,6 +38,9 @@ public class StudentsController implements Initializable{
 	
 	@FXML
 	private ListView<String> myListView;
+	
+	@FXML
+	private Label rowCountLabel;
 	
 	@FXML
 	private ComboBox<String>studentNationality;
@@ -141,6 +145,7 @@ public class StudentsController implements Initializable{
 		
 		String name1 = studentRegisterName.getText();
 		myListView.getItems().add(name1);
+		rowCountLabel.setText("Tələbə sayı = "+ myListView.getItems().size());
 		
 	}
 	
@@ -152,6 +157,7 @@ public class StudentsController implements Initializable{
 			return;
 		}
 		myListView.getItems().remove(selectedIndex);
+		rowCountLabel.setText("Tələbə sayı = "+ myListView.getItems().size());
 	}
 
 	@FXML
