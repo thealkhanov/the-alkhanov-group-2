@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,11 +8,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="744.0" prefWidth="1006.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
+<AnchorPane prefHeight="829.0" prefWidth="816.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="az.dev.StudentsController">
    <children>
-      <Label layoutX="34.0" layoutY="7.0" prefHeight="53.0" prefWidth="689.0" text="Tələbə qeydiyyatı səhifəsinə xoş gəlmisiniz !" textFill="#2f753c">
+      <Label layoutX="34.0" layoutY="7.0" prefHeight="53.0" prefWidth="763.0" text="Tələbə qeydiyyatı səhifəsinə xoş gəlmisiniz !" textFill="#2f753c">
          <font>
-            <Font name="System Italic" size="36.0" />
+            <Font name="System Italic" size="40.0" />
          </font>
       </Label>
       <TextField fx:id="studentRegisterName" layoutX="174.0" layoutY="111.0" prefHeight="53.0" prefWidth="221.0">
@@ -79,26 +80,32 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="354.0" layoutY="344.0" mnemonicParsing="false" onAction="#deleteName" prefHeight="45.0" prefWidth="82.0" style="-fx-background-color: #FF0101;" text="Sil" textFill="#0031ff">
+      <Button layoutX="354.0" layoutY="344.0" mnemonicParsing="false" onAction="#deleteName" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #FF0101;" text="Sil" textFill="#0031ff">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="469.0" layoutY="344.0" mnemonicParsing="false" onAction="#selectName" prefHeight="45.0" prefWidth="82.0" style="-fx-background-color: #00f9ef;" text="Seç">
+      <Button layoutX="435.0" layoutY="344.0" mnemonicParsing="false" onAction="#selectName" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #00f9ef;" text="Seç">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="579.0" layoutY="344.0" mnemonicParsing="false" onAction="#editName" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #FFBA0E;" text="Redaktə et">
+      <Button layoutX="516.0" layoutY="344.0" mnemonicParsing="false" onAction="#editName" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #FFBA0E;" text="Redaktə et">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <ListView fx:id="myListView" layoutX="14.0" layoutY="423.0" prefHeight="202.0" prefWidth="992.0" />
-      <Label fx:id="rowCountLabel" alignment="BOTTOM_LEFT" layoutX="17.0" layoutY="631.0" prefHeight="54.0" prefWidth="308.0">
+      <ListView fx:id="myListView" layoutX="14.0" layoutY="423.0" prefHeight="89.0" prefWidth="772.0" />
+      <Label fx:id="rowCountLabel" alignment="BOTTOM_LEFT" layoutX="34.0" layoutY="632.0" prefHeight="54.0" prefWidth="308.0">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
+      <ImageView fx:id="myImage" fitHeight="200.0" fitWidth="200.0" layoutX="586.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="652.0" layoutY="344.0" mnemonicParsing="false" onAction="#showImage" prefHeight="45.0" prefWidth="99.0" style="-fx-background-color: #FF0EF4;" text="Şəkili aç" textFill="#007649">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

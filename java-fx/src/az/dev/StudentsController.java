@@ -1,5 +1,6 @@
 package az.dev;
 
+import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.Date;
@@ -18,6 +19,8 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class StudentsController implements Initializable{
 	
@@ -35,6 +38,9 @@ public class StudentsController implements Initializable{
 	
 	@FXML
 	private DatePicker studentBirthday;
+	
+	@FXML
+	private ImageView myImage;
 	
 	@FXML
 	private ListView<String> myListView;
@@ -163,7 +169,7 @@ public class StudentsController implements Initializable{
 	@FXML
 	private void selectName() {
 		String gosterilecekAd = myListView.getSelectionModel().getSelectedItem();
-		Utility.showMessage("Bunu cədvəldən seçdin", gosterilecekAd, 6, Pos.BASELINE_RIGHT);
+		Utility.showMessage("Bunu cədvəldən seçdin: ", gosterilecekAd, 6, Pos.BASELINE_RIGHT);
 	}
 	
 	@FXML
@@ -176,6 +182,13 @@ public class StudentsController implements Initializable{
 		}
 		myListView.getItems().set(selectedIndex, name1);
 		
+	}
+	
+	@FXML
+	private void showImage() {
+		File file = new File("images/Java-Logo.png");
+		Image image = new Image(file.toURI().toString());
+		myImage.setImage(image);
 	}
 	
 }
