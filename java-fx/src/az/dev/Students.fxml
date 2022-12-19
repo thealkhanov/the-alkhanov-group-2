@@ -70,27 +70,27 @@
          </padding>
       </Label>
       <ComboBox fx:id="studentNationality" layoutX="541.0" layoutY="264.0" prefHeight="53.0" prefWidth="221.0" />
-      <Button layoutX="46.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveStudentsToDatabase" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #000000;" text="Bazaya yaz" textFill="#fcff1a">
+      <Button layoutX="34.0" layoutY="344.0" mnemonicParsing="false" onAction="#saveStudentsToDatabase" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #000000;" text="Bazaya yaz" textFill="#fcff1a">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="188.0" layoutY="344.0" mnemonicParsing="false" onAction="#onAddNameToListView" prefHeight="45.0" prefWidth="143.0" style="-fx-background-color: #6A0C51;" text="List-də göstər" textFill="#25cdff">
+      <Button layoutX="174.0" layoutY="344.0" mnemonicParsing="false" onAction="#onAddNameToListView" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: #6A0C51;" text="Listdə göstər" textFill="#25cdff">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="354.0" layoutY="344.0" mnemonicParsing="false" onAction="#deleteName" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #FF0101;" text="Sil" textFill="#0031ff">
+      <Button layoutX="330.0" layoutY="344.0" mnemonicParsing="false" onAction="#deleteName" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #FF0101;" text="Sil" textFill="#0031ff">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="435.0" layoutY="344.0" mnemonicParsing="false" onAction="#selectName" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #00f9ef;" text="Seç">
+      <Button layoutX="408.0" layoutY="344.0" mnemonicParsing="false" onAction="#selectName" prefHeight="45.0" prefWidth="58.0" style="-fx-background-color: #00f9ef;" text="Seç">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="516.0" layoutY="344.0" mnemonicParsing="false" onAction="#editName" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #FFBA0E;" text="Redaktə et">
+      <Button layoutX="487.0" layoutY="344.0" mnemonicParsing="false" onAction="#editName" prefHeight="45.0" prefWidth="119.0" style="-fx-background-color: #FFBA0E;" text="Redaktə et">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -102,7 +102,7 @@
          </font>
       </Label>
       <ImageView fx:id="myImage" fitHeight="200.0" fitWidth="200.0" layoutX="586.0" layoutY="524.0" pickOnBounds="true" preserveRatio="true" />
-      <Button layoutX="652.0" layoutY="344.0" mnemonicParsing="false" onAction="#showImage" prefHeight="45.0" prefWidth="99.0" style="-fx-background-color: #FF0EF4;" text="Şəkili aç" textFill="#007649">
+      <Button layoutX="627.0" layoutY="344.0" mnemonicParsing="false" onAction="#showImage" prefHeight="45.0" prefWidth="135.0" style="-fx-background-color: #FF0EF4;" text="Şəkili göstər" textFill="#007649">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

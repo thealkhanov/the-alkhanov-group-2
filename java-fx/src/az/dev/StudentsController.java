@@ -184,9 +184,15 @@ public class StudentsController implements Initializable{
 		
 	}
 	
-	@FXML
+	String[] imagesMassivi = {"Java-Logo.png","jva.jpg","jdk-jre-jvm.png"};
+	int i=0;
+	
+	@FXML  
 	private void showImage() {
-		File file = new File("images/Java-Logo.png");
+		File file = new File("images/"+imagesMassivi[i++]);
+		if(i==imagesMassivi.length) {
+			i=0;
+		}
 		Image image = new Image(file.toURI().toString());
 		myImage.setImage(image);
 	}
